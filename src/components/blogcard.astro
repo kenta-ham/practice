@@ -13,10 +13,13 @@ interface Props {
 }
 
 const { entry, image } = Astro.props;
+
+// GitHub Pages用のベースパス（/practice）を考慮したリンク
+const blogUrl = `/practice/blog/${entry.id}`;
 ---
 
 <div class="blog-card">
-	<a href={`/astro-hands-on/blog/${entry.id}`} class="blog-card__link">
+	<a href={blogUrl} class="blog-card__link">
 		<div class="blog-card__image">
 			{image && (
 				<Image
