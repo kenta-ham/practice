@@ -1,6 +1,6 @@
 import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
-
+// test
 const blog = defineCollection({
   // 'src/content/blog'内のMarkdownファイルを読み込む
   loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
